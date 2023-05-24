@@ -61,7 +61,7 @@ def body():
         )
         success = result.json()["success"]
         if not success:
-            print "Realice nuevamente la verificación de seguridad."
+            print("Realice nuevamente la verificación de seguridad.")
             return
         
         from email.mime.multipart import MIMEMultipart
@@ -93,12 +93,12 @@ def body():
         smtp.sendmail(EMAIL_ADDRESS, RECEIVER, mime_message.as_string())
         smtp.quit()
         
-        print "¡Tu mensaje ha sido enviado!"
+        print("¡Tu mensaje ha sido enviado!")
 
 
 def main():
     # Headers.
-    print "Content-Type: text/html"
+    print ("Content-Type: text/html")
     print
     
     print """\
