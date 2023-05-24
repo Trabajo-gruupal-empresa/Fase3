@@ -38,7 +38,7 @@ FORM_HTML_CODE = \
 def body():
     if getenv("REQUEST_METHOD") == "GET":
         # Mostrar formulario.
-        print FORM_HTML_CODE.format(public_key=PUBLIC_KEY)
+        print(FORM_HTML_CODE.format(public_key=PUBLIC_KEY))
     else:
         # Enviar formulario.
         form_input = cgi.FieldStorage()
@@ -101,7 +101,7 @@ def main():
     print ("Content-Type: text/html")
     print
     
-    print """\
+    print ("""\
     <html>
     <head>
       <title>Formulario de contacto</title>
@@ -109,11 +109,11 @@ def main():
       <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
-      <h3>Contacto</h3>"""
+      <h3>Contacto</h3>""")
     
     body()
     
-    print "</body></html>"
+    print ("</body></html>")
 
 
 if __name__ == "__main__":
