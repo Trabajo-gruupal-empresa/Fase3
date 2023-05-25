@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from BaseHTTPServer import HTTPServer
-from CGIHTTPServer import CGIHTTPRequestHandler
+from http.server import HTTPServer
+from http.server import CGIHTTPRequestHandler
 
 
 class Handler(CGIHTTPRequestHandler):
