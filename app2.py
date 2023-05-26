@@ -41,11 +41,9 @@ def guardar_contacto(request):
 
     return Response('Contacto registrado correctamente')
 
-# Configurar las rutas de la aplicación
 config = Configurator()
 config.add_route('home', '/')
 config.add_route('guardar_contacto', '/guardar_contacto')
 config.scan()
 
-# Iniciar la aplicación Pyramid
 app = config.make_wsgi_app()
