@@ -9,7 +9,6 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import sessionmaker
 
-# Definir el modelo de datos utilizando SQLAlchemy
 Base = declarative_base()
 
 class Contacto(Base):
