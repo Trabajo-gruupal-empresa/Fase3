@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# Importamos el módulo CGIHTTPServer
+
 from http.server import HTTPServer
 from http.server import CGIHTTPRequestHandler
 
