@@ -10,9 +10,9 @@ from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
 
-class Contacto(Base):                           
+class Contacto(Base):                            # Definimos la clase Contacto
     __tablename__ = 'contactos'
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)       # Definimos los atributos de la clase
     nombre = Column(String)
     email = Column(String)
     telefono = Column(String)
@@ -22,7 +22,7 @@ engine = create_engine('postgresql://usuario:contraseña@localhost:5432/nombre_b
 Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 
-@view_config(route_name='home', renderer='formulario.pt')
+@view_config(route_name='home', renderer='formulario.pt')          # Decorador que define la ruta y la plantilla a renderizar
 def home(request):
     return {}
 
